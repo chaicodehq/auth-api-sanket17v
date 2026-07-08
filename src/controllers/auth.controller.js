@@ -78,14 +78,14 @@ export async function login(req, res, next) {
 
 /**
  * TODO: Get current user
- *
+ 
  * 1. req.user is already set by auth middleware
  * 2. Return 200 with { user: req.user }
  */
 export async function me(req, res, next) {
   try {
     // Your code here
-    
+
   } catch (error) {
     next(error);
   }
