@@ -69,5 +69,6 @@ export function signToken(payload) {
  */
 export function verifyToken(token) {
   // Your code here
+  
    return jwt.verify(token, process.env.JWT_SECRET);
 }

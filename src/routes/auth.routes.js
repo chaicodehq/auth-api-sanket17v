@@ -14,4 +14,6 @@ const router = Router();
 
 // Your routes here
 
+router.post('/register',register);
+
 export default router;
