@@ -11,7 +11,7 @@ import { requireRole } from '../middlewares/role.middleware.js';
  * DELETE /:id        → deleteUser (requires authenticate and requireRole('admin'))
  *
  * Apply authenticate middleware to all routes
- * Apply requireRole('admin') middleware to all routes
+  Apply requireRole('admin') middleware to all routes
  */
 
 const router = Router();
