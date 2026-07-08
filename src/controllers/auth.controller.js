@@ -27,8 +27,10 @@ export async function register(req, res, next) {
       email,
       password
     })
+    const user = newUser.toObject();
+    delete user.password;
 
-    return res.status(201).json({ user: newUser })
+    return res.status(201).json({ user })
 
   } catch (error) {
     next(error);
@@ -68,9 +70,10 @@ export async function login(req, res, next) {
       role: user.role,
     });
 
-    user.password = undefined;
+    const userObj = user.toObject();
+    delete userObj.password;
 
-    return res.status(200).json({ token, user })
+    return res.status(200).json({ token, user:userObj })
   } catch (error) {
     next(error);
   }
