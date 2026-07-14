@@ -25,7 +25,7 @@ export async function register(req, res, next) {
     const newUser = await User.create({
       name,
       email,
-      password
+      password,
     })
     const user = newUser.toObject();
     delete user.password;
